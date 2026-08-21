@@ -1,0 +1,248 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Satoshi', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --color-navy: #0B1220;
+  --color-navy-800: #0f1a2e;
+  --color-navy-700: #1a2848;
+  --color-navy-600: #243358;
+  --color-navy-500: #2d4068;
+
+  --color-primary: #2563EB;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #3b82f6;
+
+  --color-accent: #06B6D4;
+  --color-accent-dark: #0891b2;
+  --color-accent-light: #22d3ee;
+
+  --color-surface: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-muted: #64748b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Locomotive Scroll manages smooth scrolling — keep native for fallback */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Satoshi', 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #ffffff;
+  color: #0B1220;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* -- Tech grid patterns -- */
+.tech-grid {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(37, 99, 235, 0.18) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+}
+
+.tech-grid-fine {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(37, 99, 235, 0.12) 1px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+}
+
+/* -- Keyframe animations -- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(12px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.9; }
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes scale-pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.06); }
+}
+
+@keyframes slide-in-bar {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* -- Utility animation classes -- */
+.animate-fade-in-up   { animation: fadeInUp 0.65s ease-out forwards; }
+.animate-fade-in      { animation: fadeIn 0.8s ease-out forwards; }
+.animate-slide-in-left{ animation: slideInLeft 0.6s ease-out forwards; }
+.animate-pulse-slow   { animation: pulse-slow 3s ease-in-out infinite; }
+.animate-spin-slow    { animation: spin-slow 60s linear infinite; transform-box: fill-box; transform-origin: center; }
+.animate-float        { animation: float 6s ease-in-out infinite; }
+.animate-float-reverse{ animation: float-reverse 5s ease-in-out infinite; }
+.animate-glow-pulse   { animation: glow-pulse 2.5s ease-in-out infinite; }
+.animate-gradient     { animation: gradient-shift 5s ease infinite; background-size: 200% 200%; }
+.animate-scale-pulse  { animation: scale-pulse 3s ease-in-out infinite; }
+
+/* Delay helpers */
+.animation-delay-150  { animation-delay: 150ms; }
+.animation-delay-300  { animation-delay: 300ms; }
+.animation-delay-450  { animation-delay: 450ms; }
+.animation-delay-600  { animation-delay: 600ms; }
+.animation-delay-800  { animation-delay: 800ms; }
+.animation-delay-1000 { animation-delay: 1000ms; }
+
+/* Prevent flash before animation */
+.animate-fade-in-up,
+.animate-fade-in,
+.animate-slide-in-left {
+  opacity: 0;
+}
+
+/* -- Glow utilities -- */
+.glow-primary {
+  box-shadow:
+    0 0 20px rgba(37, 99, 235, 0.3),
+    0 0 60px rgba(37, 99, 235, 0.12),
+    0 0 100px rgba(37, 99, 235, 0.06);
+}
+
+.glow-accent {
+  box-shadow:
+    0 0 20px rgba(6, 182, 212, 0.3),
+    0 0 60px rgba(6, 182, 212, 0.12);
+}
+
+.glow-primary-sm {
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.25), 0 0 30px rgba(37, 99, 235, 0.1);
+}
+
+/* -- Gradient text -- */
+.text-gradient {
+  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-reverse {
+  background: linear-gradient(135deg, #06B6D4 0%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* -- Glass morphism -- */
+.glass {
+  background: rgba(11, 18, 32, 0.65);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* -- Gradient border -- */
+.gradient-border-primary {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0f1a2e, #0f1a2e) padding-box,
+    linear-gradient(135deg, rgba(37,99,235,0.6), rgba(6,182,212,0.5)) border-box;
+}
+
+/* -- Shimmer overlay (for progress bars etc) -- */
+.shimmer-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  animation: shimmer 2s linear infinite;
+}
+
+/* -- Section reveal (CSS fallback) -- */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.section-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -- Custom cursor: hide native cursor on pointer devices -- */
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
+/* -- Prefers-reduced-motion -- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

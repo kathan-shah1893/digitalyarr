@@ -1,0 +1,31 @@
+{
+  "testimonials": [
+    {
+      "id": "testimonial-001",
+      "name": "Ankit Sharma",
+      "role": "CTO",
+      "company": "FinEdge",
+      "avatar": "/images/testimonials/ankit-sharma.webp",
+      "rating": 5,
+      "quote": "DigitalYarr transformed our idea into a powerful digital product. Their team is talented, responsive, and reliable."
+    },
+    {
+      "id": "testimonial-002",
+      "name": "Priya Mehta",
+      "role": "Product Manager",
+      "company": "HealthPlus",
+      "avatar": "/images/testimonials/priya-mehta.webp",
+      "rating": 5,
+      "quote": "Professional, proactive, and technically strong team. They delivered more than what we expected."
+    },
+    {
+      "id": "testimonial-003",
+      "name": "Rohan Verma",
+      "role": "CEO",
+      "company": "CloudScale",
+      "avatar": "/images/testimonials/rohan-verma.webp",
+      "rating": 5,
+      "quote": "Their DevOps and cloud expertise helped us scale seamlessly. Highly recommended!"
+    }
+  ]
+}

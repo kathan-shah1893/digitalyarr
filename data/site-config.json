@@ -1,0 +1,38 @@
+{
+  "companyName": "DigitalYarr",
+  "tagline": "YOUR END-TO-END TECHNOLOGY PARTNER",
+  "shortTagline": "One Partner. Complete Technology.",
+  "description": "DigitalYarr is a technology solutions partner built around one principle — that businesses deserve a single, capable partner for their complete technology journey.",
+  "siteUrl": "https://digitalyarr.com",
+  "contact": {
+    "phone": "+91 9898117731",
+    "phoneDisplay": "+91 98981 17731",
+    "email": "support@digitalyarr.com",
+    "address": "Ahmedabad, Gujarat, India",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "India",
+    "areasServed": ["Ahmedabad", "Gandhinagar"]
+  },
+  "social": {
+    "linkedin": "",
+    "twitter": "",
+    "github": "",
+    "instagram": ""
+  },
+  "stats": [
+    { "id": "projects", "label": "Projects Delivered", "value": "", "suffix": "+" },
+    { "id": "satisfaction", "label": "Client Satisfaction", "value": "", "suffix": "%" },
+    { "id": "technologies", "label": "Technologies", "value": "20", "suffix": "+" },
+    { "id": "support", "label": "Support Available", "value": "24/7", "suffix": "" }
+  ],
+  "projectCategories": [
+    "Web Development",
+    "Mobile Apps",
+    "Cloud Solutions",
+    "DevOps & CI/CD",
+    "AI & Automation",
+    "Cybersecurity",
+    "Other"
+  ]
+}
